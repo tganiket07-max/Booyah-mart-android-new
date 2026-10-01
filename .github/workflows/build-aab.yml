@@ -45,9 +45,9 @@ jobs:
         run: |
           if [ -f "./gradlew" ]; then
             chmod +x ./gradlew
-            ./gradlew bundleRelease --no-daemon
+            ./gradlew bundleRelease --no-daemon --stacktrace --info --console=plain
           else
-            gradle bundleRelease --no-daemon
+            gradle bundleRelease --no-daemon --stacktrace --info --console=plain
           fi
 
       - name: Upload AAB
